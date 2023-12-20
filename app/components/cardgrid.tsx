@@ -52,13 +52,13 @@ const CardGrid = ({ character, maxpages }: Props) => {
         <Grid container spacing={2}>
           {character.map((chrt) => (
             <Grid key={chrt.id} item xs={4}>
-              {chrt.name} - {chrt.species}
               <Image
                 src={chrt.image ? chrt.image : ""}
                 width={500}
                 height={500}
                 alt="Picture of the author"
               />
+              {chrt.name} - {chrt.species}
             </Grid>
           ))}
         </Grid>
