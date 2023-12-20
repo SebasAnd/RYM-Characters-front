@@ -26,7 +26,6 @@ export default async function Home({ searchParams }: Params) {
         method: "GET",
       });
       const data = await res.json();
-      console.log(data.results);
       const characters: Character[] = data.results as Character[];
       pageContent = (
         <>

@@ -26,7 +26,6 @@ type Character = {
 
 const CardGrid = ({ character, maxpages }: Props) => {
   const { push } = useRouter();
-  console.log("clicked", character);
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
     push("/?page=" + value);
   };
