@@ -29,6 +29,13 @@ const CardGrid = ({ character, maxpages }: Props) => {
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
     push("/?page=" + value);
   };
+
+  function HFilter(elements: Character) {
+    if ("" + elements.species === "Human") {
+      return elements;
+    }
+  }
+  character = character.filter(HFilter);
   return (
     <>
       <div>
